@@ -5,12 +5,12 @@ import listingType from "../../types/listing";
 export default {
   type: listingType,
   args: {
-    id: {
-      name: "id",
+    _id: {
+      name: "_id",
       type: new GraphQLNonNull(GraphQLID),
     },
   },
   resolve(root, params, options) {
-    return ListingModel.findById(params.id).exec();
+    return ListingModel.findById(params._id).exec();
   },
 };
