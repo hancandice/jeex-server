@@ -1,6 +1,6 @@
 import { GraphQLObjectType, GraphQLSchema } from "graphql";
 
-import mutation from "./mutations";
+import mutations from "./mutations";
 import queries from "./queries";
 
 export default new GraphQLSchema({
@@ -10,6 +10,6 @@ export default new GraphQLSchema({
   }),
   mutation: new GraphQLObjectType({
     name: "Mutation",
-    fields: mutation,
+    fields: mutations,
   }),
 });
